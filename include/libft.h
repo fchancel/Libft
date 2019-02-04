@@ -6,7 +6,7 @@
 /*   By: fchancel <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 18:15:16 by fchancel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/03 14:39:31 by fchancel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/01/30 12:29:57 by fchancel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,25 +19,22 @@
 # include <string.h>
 # include "get_next_line.h"
 
-# define RED			"\033[0;31m"
-# define BOLD_RED		"\033[1;31m"
-# define GREEN 			"\033[0;32m"
-# define BOLD_GREEN		"\033[1;32m"
-# define YELLOW			"\033[0;33m"
-# define BOLD_YELLOW	"\033[1;33m"
-# define BLUE			"\033[0;34m"
-# define BOLD_BLUE		"\033[1;34m"
-# define MAGENTA		"\033[0;35m"
-# define BOLD_MAGENTA	"\033[1;35m"
-# define CYAN			"\033[0;36m"
-# define BOLD_CYAN		"\033[1;36m"
-
-typedef	struct	s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}				t_list;
+# define RED				"\033[0;31m"
+# define BOLD_RED			"\033[1;31m"
+# define GREEN 				"\033[0;32m"
+# define BOLD_GREEN			"\033[1;32m"
+# define YELLOW				"\033[0;33m"
+# define BOLD_YELLOW		"\033[1;33m"
+# define BLUE				"\033[0;34m"
+# define BOLD_BLUE			"\033[1;34m"
+# define MAGENTA			"\033[0;35m"
+# define BOLD_MAGENTA		"\033[1;35m"
+# define CYAN				"\033[0;36m"
+# define BOLD_CYAN			"\033[1;36m"
+# define YELLOW_HIGHT_BLACK	"\033[0;30;43m"
+# define YELLOW_HIGHT_BLUE	"\033[0;34;43m"
+# define BLUE_HIGHT_BLUE	"\033[0;34;46m"
+# define RED_HIGHT_BLACK	"\033[0;30;41m"
 
 void			ft_putchar(char c);
 void			ft_putstr(char const *s);
@@ -91,18 +88,8 @@ void			ft_putnbr(int n);
 void			ft_putnbr_fd(int n, int fd);
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
 char			**ft_strsplit(char const *s, char c);
-t_list			*ft_lstnew(void const *content, size_t content_siz);
-void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
-void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void			ft_lstadd(t_list **alst, t_list *new);
-void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-int				ft_lstcount(t_list *lst);
-t_list			*ft_s2tab_to_lst(char **ctab);
-char			**ft_lst_to_s2tab(t_list *lst);
 int				*ft_sort_tab(int *tab, int size);
 int				ft_isspace(char c);
-void			ft_display_lststr(t_list *lst, char c);
 void			ft_display_s2tab(char **tab, char c);
 void			ft_free_2tab(void **tab);
 char			*ft_strnjoin(char const *s1, char const *s2, size_t n);
@@ -110,6 +97,6 @@ void			*ft_realloc(void *ptr, size_t size);
 void			ft_free_tab(void **tab, int n);
 void			ft_error(char *str);
 void			ft_putcolor(char *o_color, char *str);
-t_list			ft_sort_List(t_list *lst);
+int				ft_intlen(int nb);
 
 #endif

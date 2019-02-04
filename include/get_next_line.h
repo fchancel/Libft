@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lst_to_s2tab.c                                .::    .:/ .      .::   */
+/*   get_next_line.h                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: fchancel <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/09 14:29:15 by fchancel     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/10 16:39:56 by fchancel    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/12/18 21:32:59 by fchancel     #+#   ##    ##    #+#       */
+/*   Updated: 2019/01/30 12:29:50 by fchancel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-char	**ft_lst_to_s2tab(t_list *lst)
-{
-	char	**array;
-	int		i;
+# define BUFF_SIZE 10
+# define FREE 0
+# define FD_FOR_FREE 0
+# define LINE_FOR_FREE NULL
+# define NORMAL_USE 1
+# include "libft.h"
 
-	i = 0;
-	if (!lst)
-		return (NULL);
-	if (!(array = ft_memalloc(sizeof(char *) * (ft_lstcount(lst) + 1))))
-		return (NULL);
-	while (lst)
-	{
-		if (!(array[i] = ft_strsub(lst->content, 0, lst->content_size)))
-			return (NULL);
-		i++;
-		lst = lst->next;
-	}
-	array[i] = NULL;
-	return (array);
-}
+int					get_next_line(const int fd, char **line, int error);
+
+#endif

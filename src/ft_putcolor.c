@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstcount.c                                    .::    .:/ .      .::   */
+/*   ft_putcolor.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: fchancel <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/09 09:21:25 by fchancel     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 15:26:15 by fchancel    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/01/02 18:49:38 by fchancel     #+#   ##    ##    #+#       */
+/*   Updated: 2019/01/22 12:04:47 by fchancel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstcount(t_list *lst)
+void	ft_putcolor(char *o_color, char *str)
 {
-	int		i;
-
-	i = 0;
-	if (!(lst))
-		return (0);
-	while (lst != NULL)
-	{
-		i++;
-		lst = lst->next;
-	}
-	return (i);
+	ft_putstr(o_color);
+	ft_putstr(str);
+	ft_putstr("\033[0m");
 }

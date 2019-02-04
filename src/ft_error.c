@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstadd.c                                      .::    .:/ .      .::   */
+/*   ft_error.c                                       .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: fchancel <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/08 08:20:05 by fchancel     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/08 09:15:53 by fchancel    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/12/26 14:37:17 by fchancel     #+#   ##    ##    #+#       */
+/*   Updated: 2019/01/02 19:17:02 by fchancel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_error(char *str)
 {
-	if (new)
-	{
-		new->next = *alst;
-		*alst = new;
-	}
-	else
-		return ;
+	ft_putendl(str);
+	exit(1);
 }

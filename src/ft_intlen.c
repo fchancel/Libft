@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   get_next_line.h                                  .::    .:/ .      .::   */
+/*   ft_intlen.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: fchancel <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/12/18 21:32:59 by fchancel     #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/26 13:48:21 by fchancel    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/01/27 12:58:45 by fchancel     #+#   ##    ##    #+#       */
+/*   Updated: 2019/01/27 13:23:16 by fchancel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# define BUFF_SIZE 10
-# define FREE 0
-# define FD_FOR_FREE 0
-# define LINE_FOR_FREE NULL
-# define NORMAL_USE 1
-# include "libft.h"
+int			ft_intlen(int nb)
+{
+	char	*str;
+	int		len;
 
-int					get_next_line(const int fd, char **line, int error);
-
-#endif
+	str = ft_itoa(nb);
+	len = ft_strlen(str);
+	free(str);
+	return (len);
+}

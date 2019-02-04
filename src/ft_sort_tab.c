@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstiter.c                                     .::    .:/ .      .::   */
+/*   ft_sort_tab.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: fchancel <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/08 09:16:27 by fchancel     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/08 09:43:19 by fchancel    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/09 16:53:41 by fchancel     #+#   ##    ##    #+#       */
+/*   Updated: 2019/01/30 09:57:26 by fchancel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+int		*ft_sort_tab(int *tab, int size)
 {
-	if (lst && f)
+	int i;
+	int j;
+	int swap;
+
+	i = 1;
+	while (i < size)
 	{
-		while (lst->next != NULL)
+		j = i;
+		while (tab[j] < tab[j - 1] && j > 0)
 		{
-			f(lst);
-			lst = lst->next;
+			swap = tab[j];
+			tab[j] = tab[j - 1];
+			tab[j - 1] = swap;
+			j--;
 		}
-		f(lst);
+		i++;
 	}
+	return (tab);
 }
