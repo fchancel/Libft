@@ -1,4 +1,70 @@
-#LIBFT
+# LIBFT
 
-Réécriture d'une partie de la lib C.
+## Création d'une librairie de 63 fonctions.
+
+Réécriture d'une partie de la lib C, écriture de fonction de ma propre création, écriture de fonction traitant les listes chaînés, etc...
+
+*  ft_atoi.c
+*  ft_intlen.c
+*  ft_isspace.c
+*  ft_memcpy.c
+*  ft_putcolor.c
+*  ft_putstr_fd.c
+*  ft_strcmp.c
+*  ft_striteri.c
+*  ft_strncat.c
+*  ft_strnstr.c
+*  ft_tolower.c
+*  ft_bzero.c
+*  ft_isalnum.c
+*  ft_itoa.c
+*  ft_memdel.c
+*  ft_putendl.c
+*  ft_realloc.c
+*  ft_strcpy.c
+*  ft_strjoin.c
+*  ft_strncmp.c
+*  ft_strrchr.c
+*  ft_toupper.c
+*  ft_display_s2tab.c
+*  ft_isalpha.c
+*  ft_memalloc.c
+*  ft_memmove.c
+*  ft_putendl_fd.c
+*  ft_sort_tab.c
+*  ft_strdel.c
+*  ft_strlcat.c
+*  ft_strncpy.c
+*  ft_strsplit.c
+*  get_next_line.c
+*  ft_error.c
+*  ft_isascii.c
+*  ft_memccpy.c
+*  ft_memset.c
+*  ft_putnbr.c
+*  ft_strcat.c
+*  ft_strdup.c
+*  ft_strlen.c
+*  ft_strnequ.c
+*  ft_strstr.c
+*  ft_free_2tab.c
+*  ft_isdigit.c
+*  ft_memchr.c
+*  ft_putchar.c
+*  ft_putnbr_fd.c
+*  ft_strchr.c
+*  ft_strequ.c
+*  ft_strmap.c
+*  ft_strnew.c
+*  ft_strsub.c
+*  ft_free_tab.c
+*  ft_isprint.c
+*  ft_memcmp.c
+*  ft_putchar_fd.c
+*  ft_putstr.c
+*  ft_strclr.c
+*  ft_striter.c
+*  ft_strmapi.c
+*  ft_strnjoin.c
+*  ft_strtrim.c
 
